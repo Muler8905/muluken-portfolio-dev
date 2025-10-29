@@ -1,0 +1,199 @@
+:root{
+  --bg: #0b0b0d;
+  --card: #0f1113;
+  --muted: #9aa3ad;
+  --accent: #00bfff; /* neon blue */
+  --text: #eaf6ff;
+  --radius: 12px;
+  --gap: 16px;
+}
+
+/* Container */
+.testimonials {
+  padding: 28px 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: var(--surface);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* header row (title + controls) */
+.headerRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:12px;
+  gap:12px;
+}
+.heading{
+  font-size:20px;
+  margin:0;
+  font-weight:600;
+  letter-spacing:0.2px;
+}
+
+/* controls (buttons) */
+.controls{
+  display:flex;
+  gap:8px;
+ 
+}
+.controlBtn{
+  background: transparent;
+  border: 1px;
+  color: var(---text);
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:20px;
+  line-height:1;
+  min-width:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+.controlBtn:hover{
+  transform: translateY(-2px);
+  border-color: rgba(0,191,255,0.9);
+   background: none;
+}
+
+/* Viewport masks overflow */
+.viewport{
+  overflow:hidden;
+  position:relative;
+  padding: 6px 0;
+}
+
+/* Track: horizontal flex list of cards */
+.track{
+  display:flex;
+  gap: var(--gap);
+  /* transform handled inline from component */
+  will-change: transform;
+}
+
+/* Card base (mobile-first: each card fills viewport width) */
+.card{
+  flex: 0 0 100%;
+   background-color: var(--surface);
+    color:var(---text);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  min-height: 160px;
+}
+
+/* card meta row */
+.meta{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.photo{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid rgba(255,255,255,0.06);
+  background: linear-gradient(90deg, var(--card), rgba(255,255,255,0.02));
+}
+
+.name{
+  font-weight:700;
+  font-size:15px;
+  color:var(---text);
+}
+.title{
+  font-size:13px;
+ color:var(---text);
+  margin-top:2px;
+}
+
+/* quote and rating */
+.quote{
+  font-size:14px;
+  line-height:1.5;
+  color:var(---text);
+  margin:6px 0 0;
+  flex:1 1 auto;
+}
+.rating{
+  color:var(--accent);
+  font-weight:700;
+  margin-top:8px;
+}
+
+/* Medium screens: show 2 cards */
+@media (min-width: 640px){
+  .card{
+    flex: 0 0 calc(50% - (var(--gap) / 2));
+  }
+  .photo{ width:64px; height:64px; }
+}
+
+/* Large screens: show 3 cards */
+@media (min-width: 980px){
+  .card{
+    flex: 0 0 calc((100% / 3) - (var(--gap) * (2/3)));
+  }
+  .testimonials { padding: 36px 20px; }
+  .heading { font-size:22px; }
+}
+
+/* Tiny screens tweak */
+@media (max-width:360px){
+  .photo{ width:48px; height:48px; }
+  .quote{ font-size:13px; }
+}
+/* --- New styles for side controls --- */
+.viewport {
+  position: relative;
+  overflow: hidden;
+  padding: 6px 0;
+}
+
+/* Left & right arrow buttons centered vertically */
+.controlBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(---text);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+}
+
+.controlBtn:hover {
+  background: rgba(0, 191, 255, 0.2);
+  border-color: var(--accent);
+  transform: translateY(-50%) scale(1.1);
+}
+.controlBtn:hover {
+  box-shadow: 0 0 12px var(--accent);
+}
+
+/* Left arrow */
+.left {
+  left: 10px;
+}
+
+/* Right arrow */
+.right {
+  right: 10px;
+}

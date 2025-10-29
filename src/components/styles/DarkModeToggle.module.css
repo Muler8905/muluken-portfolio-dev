@@ -1,0 +1,19 @@
+.toggleBtn {
+  position: fixed;
+  top: 1.5rem;
+  right: 0.5rem;
+  background-color: #10b981;
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius:99px ;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(16,185,129,0.5);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.toggleBtn:hover {
+  background-color: #059669;
+}

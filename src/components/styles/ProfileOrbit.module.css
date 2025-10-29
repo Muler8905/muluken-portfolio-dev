@@ -1,0 +1,46 @@
+.orbitContainer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.orbitRing {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid hsl(130, 89%, 48%);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border: 2px solid #1f369c;
+}
+
+/* 🔥 Flame ball */
+.flameBall {
+  position: absolute;
+  top: -10px; /* start above the orbit */
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+.flameInner {
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, skyblue 30%, rgb(84, 7, 228) 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(2, 52, 92, 0.8);
+}

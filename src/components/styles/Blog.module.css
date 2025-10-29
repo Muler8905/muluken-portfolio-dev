@@ -1,0 +1,33 @@
+.blog{
+              max-width: 600px;
+              margin: 4rem auto;
+              box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+            }
+            
+            .heading{
+              text-align: center;
+              font-size: 2rem;
+              margin-bottom: 2rem;
+              font-weight: bold;
+              color: orange;
+            }
+            
+            .post {
+              border-bottom: 1px solid #ddd;
+              padding: 1rem 0;
+            }
+            
+            .title {
+              font-size: 1.1rem;
+              font-weight: bold;
+            }
+            
+            .summary {
+              font-size: 0.95rem;
+              color: gray;
+            }
+            .card:hover {
+              transform: translateY(-6px) scale(1.02);
+              box-shadow: 0 12px 24px rgba(253,186,116,0.4); /* orange glow */
+            }
+            

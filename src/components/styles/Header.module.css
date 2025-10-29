@@ -1,0 +1,129 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--surface);
+  color: var(--surface);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px); 
+}
+
+.shrink {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+/* Logo Section */
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.navLink {
+  position: relative;
+  color: var(---text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent);
+  color: var(---text); 
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after,
+.active::after {
+  width: 100%;
+}
+
+.navLink:hover {
+  color: var(--accent); 
+  /* color: var(--text); */
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Burger Button */
+.burger {
+  display: none;
+   border: none;
+  background-color: var(--surface);
+  font-size: 1.8rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+@media (max-width: 900px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--surface);
+    background-color:rgb(4, 61, 83);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .showMenu {
+    transform: translateX(0);
+    
+  }
+
+  .burger {
+    display: inline-block;
+    margin-right: 100px;
+    color: var(--surface);
+  }
+
+  .mobileToggle {
+    margin-top: 1rem;
+  }
+}

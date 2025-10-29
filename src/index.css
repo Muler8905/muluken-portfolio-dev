@@ -1,0 +1,78 @@
+
+/* Reset */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--bg-color, #fff);
+  color: var(--text-color, #111);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode: set in ThemeContext by toggling .dark on <html> */
+ html.dark {
+  --bg-color: #111;
+  --text-color: #eee;
+}
+
+/* Links */
+ a {
+  color: #10b981;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #0f766e;
+}
+
+/* Headings */
+ h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Container utility */
+ .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+} 
+
+/* Buttons (default style) */
+ button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background: none;
+} 
+
+/* Images */
+ img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} 
+/* Smooth transitions everywhere */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Global card shadow */
+.card {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(16,185,129,0.4);
+}

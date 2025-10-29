@@ -1,0 +1,19 @@
+.footer{
+  background: var(--card-bg);
+   padding: 2rem 1rem;
+   color: aliceblue;
+  text-align: center;
+  background: linear-gradient(90deg, rgb(226, 154, 20), rgb(79, 156, 170));
+  background-color: rgb(79, 156, 170);
+  font-size: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer a {
+  color: var(--accent);
+  margin: 0 0.5rem;
+}
+
+.footer a:hover {
+  color: skyblue;
+}

@@ -1,0 +1,54 @@
+
+            .contactCard {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #0d0d0d;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.cvButton {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #ff5722, #ff9800);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cvButton:hover {
+  box-shadow: 0 0 25px rgba(255, 87, 34, 0.8);
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.icon {
+  font-size: 2.2rem;
+  color: #aaa;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
