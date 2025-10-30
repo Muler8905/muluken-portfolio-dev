@@ -11,8 +11,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider>
       <HashRouter >
-  <App />
-</HashRouter>
+      <App />
+     </HashRouter>
 
     </ThemeProvider>
   </React.StrictMode>

@@ -3,7 +3,7 @@
   color: skyblue;
   margin-top: 30px;
  margin-bottom: 20px;
-  background: linear-gradient(135deg, #f8fafc, #e0f2f1);
+  background: none;
 }
 
 .heading {
@@ -20,7 +20,7 @@
 }
 
 .card {
-  background: white;
+  background: var(--text);
   border-radius: 1rem;
   height: 200px;
   overflow: hidden;
