@@ -22,7 +22,7 @@
 }
 
 .card {
-  background: whitesmoke;
+  background: none;
   border-radius: 1rem;
   overflow: hidden;
   text-align: left;
